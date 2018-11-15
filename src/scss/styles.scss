@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Menlo", sans-serif;
+    overflow: hidden;
+    position: fixed; //For safari ios bounce
+    color: white;
+}
+
+body {
+    background-color: #111111;
+}
