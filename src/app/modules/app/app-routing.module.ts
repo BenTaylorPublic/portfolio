@@ -5,6 +5,7 @@ import { RouterModule, Routes } from "@angular/router";
 /** The routes for the project*/
 const routes: Routes = [
     // Other Routes
+    { path: "", loadChildren: "../landing/landing.module#LandingModule" },
     { path: "test", loadChildren: "../test/test.module#TestModule" },
     // TODO: 404 route maybe, doubt it, but ask
     { path: "**", redirectTo: "" }

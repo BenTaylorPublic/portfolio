@@ -22,6 +22,15 @@
             ],
             "@mock/*": [
                 "app/mock/*"
+            ],
+            "@app/*": [
+                "app/modules/app/*"
+            ],
+            "@landing/*": [
+                "app/modules/landing/*"
+            ],
+            "@test/*": [
+                "app/modules/test/*"
             ]
         }
     }
