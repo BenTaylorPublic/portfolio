@@ -18,6 +18,8 @@ body {
     background-color: #000000;
 }
 
+// TODO: Move this into a separate file
+// For the evolution board, because it cant be added in the component, due to angular's ng-content system
 #evolutionBoard {
     table {
         border-spacing: 0px;
