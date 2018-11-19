@@ -31,6 +31,9 @@
             ],
             "@test/*": [
                 "app/modules/test/*"
+            ],
+            "@evolution/*": [
+                "app/modules/evolution/*"
             ]
         }
     }
