@@ -6,6 +6,7 @@ import { RouterModule, Routes } from "@angular/router";
 const routes: Routes = [
     // Other Routes
     { path: "", loadChildren: "../landing/landing.module#LandingModule" },
+    { path: "projects", loadChildren: "../projects/projects.module#ProjectsModule" },
     { path: "evolution", loadChildren: "../evolution/evolution.module#EvolutionModule" },
     { path: "test", loadChildren: "../test/test.module#TestModule" },
     // TODO: 404 route maybe, doubt it, but ask
