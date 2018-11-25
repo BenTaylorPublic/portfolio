@@ -32,7 +32,8 @@
                             "src/CNAME"
                         ],
                         "styles": [
-                            "src/scss/styles.scss"
+                            "src/scss/styles.scss",
+                            "node_modules/@fortawesome/fontawesome-free/css/all.css"
                         ],
                         "scripts": []
                     },
@@ -82,7 +83,8 @@
                         "tsConfig": "src/tsconfig.spec.json",
                         "karmaConfig": "src/karma.conf.js",
                         "styles": [
-                            "src/scss/styles.scss"
+                            "src/scss/styles.scss",
+                            "node_modules/@fortawesome/fontawesome-free/css/all.css"
                         ],
                         "scripts": [],
                         "assets": [
