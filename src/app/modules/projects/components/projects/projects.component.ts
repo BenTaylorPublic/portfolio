@@ -12,11 +12,19 @@ export enum ProjectEnum {
 })
 export class ProjectsComponent implements OnInit {
 
-    public currentTab: ProjectEnum = ProjectEnum.OneFunction;
+    public currentProject: ProjectEnum = ProjectEnum.OneFunction;
 
     constructor() { }
 
     ngOnInit() {
+    }
+
+    public updateCurrentProject(newValue: string): void {
+        if (newValue === "onefunction") {
+            this.currentProject = ProjectEnum.OneFunction;
+        } else if (newValue === "coldsteel") {
+            this.currentProject = ProjectEnum.Coldsteel;
+        }
     }
 
 }

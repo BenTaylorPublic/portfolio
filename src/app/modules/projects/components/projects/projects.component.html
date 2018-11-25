@@ -1,13 +1,15 @@
 <div id="projects">
     <div id="selectorArea">
         Choose a project:
-        <select>
+        <select (change)="updateCurrentProject($event.target.value)">
             <option value="onefunction">One Function</option>
             <option value="coldsteel">Coldsteel</option>
         </select>
-        Coming soon...
     </div>
     <div id="projectArea">
-        Project Area
+        <app-one-function *ngIf="currentProject === 0">
+        </app-one-function>
+        <app-coldsteel *ngIf="currentProject === 1">
+        </app-coldsteel>
     </div>
 </div>
