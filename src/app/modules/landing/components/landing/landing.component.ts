@@ -17,4 +17,8 @@ export class LandingComponent implements OnInit {
         this.router.navigate(["projects"]);
     }
 
+    public githubClicked(): void {
+        window.open("https://github.com/BenTaylorPublic", "_blank");
+    }
+
 }
