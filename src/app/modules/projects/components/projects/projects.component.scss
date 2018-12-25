@@ -10,7 +10,7 @@
     font-size: 40px;
 }
 
-#description{
+#description {
     margin-top: 20px;
 }
 
@@ -27,6 +27,15 @@
     padding: 20px;
     margin-top: 30px;
     cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+        transform: scale(1.1);
+        background-color: #333333;
+    }
+    &:active {
+        background-color: #222222;
+        transform: scale(1);
+    }
     .heading {
         font-size: 30px;
     }
