@@ -1,2 +1,43 @@
 <div id="projects">
+    <div id="headingAndDescription">
+        <div id="heading">
+            Projects
+        </div>
+        <div id="description">
+            Click the cards to go to their respective github repo
+        </div>
+    </div>
+    <div id="projectCards">
+        <div class="projectCard"
+             (click)="projectCardClicked('onefunction')">
+            <div class="heading">
+                OneFunction
+            </div>
+            <div class="description">
+                OneFunction is a naked HTML + CSS + JS program I wrote that is all in one function, which loops
+                recursively.
+                It's an implementation of snake.
+            </div>
+        </div>
+        <div class="projectCard"
+             (click)="projectCardClicked('coldsteel')">
+            <div class="heading">
+                Coldsteel
+            </div>
+            <div class="description">
+                Coldsteel is a C++ game engine/framework/tool I've been working on.
+                It wraps SFML, and is currently not on Github yet.
+            </div>
+        </div>
+        <div class="projectCard"
+             (click)="projectCardClicked('bentaylor')">
+            <div class="heading">
+                BenTaylor
+            </div>
+            <div class="description">
+                BenTaylor is this very website, written in Angular 7.
+                It'll have a API at some point, but not yet
+            </div>
+        </div>
+    </div>
 </div>
