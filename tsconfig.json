@@ -32,9 +32,6 @@
             "@test/*": [
                 "app/modules/test/*"
             ],
-            "@evolution/*": [
-                "app/modules/evolution/*"
-            ],
             "@projects/*": [
                 "app/modules/projects/*"
             ]
