@@ -4,6 +4,7 @@ import { NgModule } from "@angular/core";
 import { AppComponent } from "./components/app/app.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { CommonModule } from "@angular/common";
+import { AppService } from "./services/app/app.service";
 
 @NgModule({
     declarations: [
@@ -14,7 +15,7 @@ import { CommonModule } from "@angular/common";
         AppRoutingModule,
         CommonModule
     ],
-    providers: [],
+    providers: [AppService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

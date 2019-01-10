@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { AppService } from "@app/services/app/app.service";
 
 @Component({
     selector: "app-root",
@@ -6,4 +7,8 @@ import { Component } from "@angular/core";
     styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
+
+    constructor(private app: AppService) {
+    }
+
 }
