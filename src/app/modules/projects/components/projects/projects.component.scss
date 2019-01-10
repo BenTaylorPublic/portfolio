@@ -5,6 +5,21 @@
     height: 100%;
 }
 
+#homeButton {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 40px;
+    transition: all 0.2s;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+    }
+    &:active {
+        transform: scale(1);
+    }
+}
+
 #headingAndDescription {
     height: 120px;
 }
