@@ -11,4 +11,5 @@ import { LandingComponent } from "./components/landing/landing.component";
     ],
     declarations: [LandingComponent]
 })
-export class LandingModule { }
+export class LandingModule {
+}

@@ -10,4 +10,5 @@ import { TestRoutingModule } from "./test-routing.module";
     ],
     declarations: [TestComponent]
 })
-export class TestModule { }
+export class TestModule {
+}

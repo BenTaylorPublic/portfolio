@@ -13,4 +13,5 @@ import { ProjectsComponent } from "./components/projects/projects.component";
         ProjectsComponent
     ]
 })
-export class ProjectsModule { }
+export class ProjectsModule {
+}

@@ -12,9 +12,11 @@
     font-size: 40px;
     transition: all 0.2s;
     cursor: pointer;
+
     &:hover {
         transform: scale(1.1);
     }
+
     &:active {
         transform: scale(1);
     }
@@ -39,6 +41,7 @@
     flex-wrap: wrap;
     overflow: auto;
     max-height: calc(100% - 120px);
+
     :last-child {
         margin-bottom: 30px;
     }
@@ -54,17 +57,21 @@
     margin-right: 30px;
     cursor: pointer;
     transition: all 0.2s;
+
     &:hover {
         transform: scale(1.1);
         background-color: #333333;
     }
+
     &:active {
         background-color: #222222;
         transform: scale(1);
     }
+
     .heading {
         font-size: 30px;
     }
+
     .description {
         margin-top: 30px;
     }

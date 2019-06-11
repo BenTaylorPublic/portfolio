@@ -31,9 +31,11 @@
     text-align: center;
     cursor: pointer;
     transition: all 0.2s;
+
     &:hover {
         transform: scale(1.1);
     }
+
     &:active {
         transform: scale(1);
     }
@@ -45,9 +47,12 @@
     width: 100%;
     justify-content: center;
     margin-top: 90px;
+
     .connection {
         cursor: pointer;
         font-size: 60px;
     }
-    #github {}
+
+    #github {
+    }
 }
