@@ -5,9 +5,9 @@ import { RouterModule, Routes } from "@angular/router";
 /** The routes for the project*/
 const routes: Routes = [
     // Other Routes
-    { path: "", loadChildren: "../landing/landing.module#LandingModule" },
-    { path: "projects", loadChildren: "../projects/projects.module#ProjectsModule" },
-    { path: "test", loadChildren: "../test/test.module#TestModule" },
+    { path: "", loadChildren: () => import('../landing/landing.module').then(m => m.LandingModule) },
+    { path: "projects", loadChildren: () => import('../projects/projects.module').then(m => m.ProjectsModule) },
+    { path: "test", loadChildren: () => import('../test/test.module').then(m => m.TestModule) },
     // TODO: 404 route maybe, doubt it, but ask
     { path: "**", redirectTo: "" }
 ];
