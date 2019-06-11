@@ -1,22 +1,19 @@
 {
     "compileOnSave": false,
     "compilerOptions": {
-    "module": "esnext",
+        "module": "esnext",
         "outDir": "./dist/out-tsc",
-        "sourceMap": true,
+        "sourceMap": false,
         "declaration": false,
         "moduleResolution": "node",
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "target": "es2015",
-        "typeRoots": [
-            "node_modules/@types"
-        ],
+        "target": "ES6",
         "lib": [
-            "es2017",
+            "esnext",
             "dom"
         ],
-        "baseUrl": "src",
+        "baseUrl": "src/",
         "paths": {
             "@models/*": [
                 "app/models/*"
@@ -36,6 +33,20 @@
             "@projects/*": [
                 "app/modules/projects/*"
             ]
-        }
+        },
+        "strict": true,
+        "noImplicitReturns": true,
+        "allowSyntheticDefaultImports": true,
+        "allowUnreachableCode": true,
+        "noUnusedLocals": false,
+        "incremental": true,
+        "removeComments": true,
+        "noUnusedParameters": false,
+        "noImplicitThis": true,
+        "noImplicitAny": true,
+        "noEmitOnError": true,
+        "strictNullChecks": true,
+        "noFallthroughCasesInSwitch": true,
+        "esModuleInterop": true
     }
 }
