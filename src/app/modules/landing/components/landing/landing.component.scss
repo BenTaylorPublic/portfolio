@@ -18,12 +18,11 @@
     user-select: text;
 }
 
-#projectsButton {
+.pageButton {
     background-color: #333333;
     width: 300px;
     height: 30px;
     line-height: 30px;
-    position: absolute;
     left: 0;
     right: 0;
     margin: 30px auto 0px auto;
@@ -46,7 +45,7 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: 90px;
+    margin-top: 40px;
 
     .connection {
         cursor: pointer;

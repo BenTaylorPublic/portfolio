@@ -18,8 +18,11 @@ export class LandingComponent implements OnInit {
         this.router.navigate(["projects"]);
     }
 
+    public gameDesignButtonClicked(): void {
+        this.router.navigate(["game-design"]);
+    }
+
     public githubClicked(): void {
         window.open("https://github.com/BenTaylorPublic", "_blank");
     }
-
 }

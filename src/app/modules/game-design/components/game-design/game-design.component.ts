@@ -14,4 +14,8 @@ export class GameDesignComponent implements OnInit {
     ngOnInit() {
     }
 
+    public homeButtonClicked(): void {
+        this.router.navigate([""]);
+    }
+
 }
