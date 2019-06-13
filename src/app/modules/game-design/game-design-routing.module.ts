@@ -3,7 +3,8 @@ import { Routes, RouterModule } from "@angular/router";
 import { GameDesignComponent } from "./components/game-design/game-design.component";
 
 const routes: Routes = [
-    { path: "", component: GameDesignComponent }
+    { path: "", component: GameDesignComponent },
+    { path: ":gameDesignToShow", component: GameDesignComponent }
 ];
 
 @NgModule({

@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
     selector: "app-landing",
@@ -8,7 +8,16 @@ import { Router } from "@angular/router";
 })
 export class GameDesignComponent implements OnInit {
 
-    constructor(private router: Router) {
+    public gameDesignToShow: "none" | "eve-dota-mmo" = "none";
+
+    constructor(private activatedRoute: ActivatedRoute,
+                private router: Router) {
+
+        this.activatedRoute.params.subscribe((parameters) => {
+            if (parameters.gameDesignToShow === "eve-dota-mmo") {
+                this.gameDesignToShow = parameters.gameDesignToShow;
+            }
+        });
     }
 
     ngOnInit() {
@@ -16,6 +25,10 @@ export class GameDesignComponent implements OnInit {
 
     public homeButtonClicked(): void {
         this.router.navigate([""]);
+    }
+
+    public designClicked(design: string): void {
+        this.router.navigate(["game-design", design]);
     }
 
 }

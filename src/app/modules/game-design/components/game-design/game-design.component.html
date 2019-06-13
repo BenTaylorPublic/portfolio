@@ -3,5 +3,20 @@
          (click)="homeButtonClicked()">
         <i class="fas fa-home"></i>
     </div>
-    Hello
+    <div id="headingAndDescription">
+        <div id="heading">
+            Game Designs
+        </div>
+        <div id="description">
+            Click the names on the left
+        </div>
+    </div>
+
+    <div (click)="designClicked('eve-dota-mmo')">
+        EVE DotA MMO
+    </div>
+
+    <div *ngIf="gameDesignToShow === 'eve-dota-mmo'">
+        DescriptionLol
+    </div>
 </div>
