@@ -12,11 +12,15 @@
         </div>
     </div>
 
-    <div (click)="designClicked('eve-dota-mmo')">
-        EVE DotA MMO
+    <div id="designSideMenu">
+        <div (click)="designClicked('eve-dota-mmo')">
+            EVE DotA MMO
+        </div>
     </div>
 
-    <div *ngIf="gameDesignToShow === 'eve-dota-mmo'">
-        DescriptionLol
+    <div id="currentDesign">
+        <app-eve-dota-mmo *ngIf="gameDesignToShow === 'eve-dota-mmo'">
+            DescriptionLol
+        </app-eve-dota-mmo>
     </div>
 </div>
