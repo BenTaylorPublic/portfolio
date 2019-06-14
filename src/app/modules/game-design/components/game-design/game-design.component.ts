@@ -14,6 +14,11 @@ export class GameDesignComponent implements OnInit {
                 private router: Router) {
 
         this.activatedRoute.params.subscribe((parameters) => {
+            if (this.gameDesignToShow === parameters.gameDesignToShow) {
+                this.gameDesignToShow = "none";
+                return;
+            }
+
             if (parameters.gameDesignToShow === "eve-dota-mmo") {
                 this.gameDesignToShow = parameters.gameDesignToShow;
             }
@@ -28,6 +33,10 @@ export class GameDesignComponent implements OnInit {
     }
 
     public designClicked(design: string): void {
+        if (this.gameDesignToShow === design) {
+            this.router.navigate(["game-design"]);
+            return;
+        }
         this.router.navigate(["game-design", design]);
     }
 

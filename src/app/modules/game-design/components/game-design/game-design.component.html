@@ -11,16 +11,17 @@
             Click the names on the left
         </div>
     </div>
-
-    <div id="designSideMenu">
-        <div (click)="designClicked('eve-dota-mmo')">
-            EVE DotA MMO
-        </div>
-    </div>
-
     <div id="currentDesign">
         <app-eve-dota-mmo *ngIf="gameDesignToShow === 'eve-dota-mmo'">
             DescriptionLol
         </app-eve-dota-mmo>
+    </div>
+
+    <div id="designSideMenu">
+        <div class="designButton"
+             [ngClass]="{'active': gameDesignToShow === 'eve-dota-mmo'}"
+             (click)="designClicked('eve-dota-mmo')">
+            EVE DotA MMO
+        </div>
     </div>
 </div>

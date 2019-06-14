@@ -24,18 +24,37 @@
 
 #headingAndDescription {
     height: 120px;
+
+    #heading {
+        font-size: 40px;
+        padding-top: 10px;
+    }
+
+    #description {
+        margin-top: 20px;
+    }
 }
 
-#heading {
-    font-size: 40px;
-    padding-top: 10px;
-}
-
-#description {
-    margin-top: 20px;
-}
 
 #designSideMenu {
+    position: absolute;
+    float: left;
+    top: 120px;
+    width: 150px;
+    height: 300px;
+    text-align: center;
+    background-color: #222222;
+    padding-top: 10px;
+
+    .designButton {
+        &.active {
+            background-color: #AAAAAA;
+            color: black;
+            font-weight: bold;
+        }
+
+        cursor: pointer;
+    }
 }
 
 #currentDesign {
