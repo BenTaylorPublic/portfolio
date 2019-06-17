@@ -1,2 +1,13 @@
 #eveDotaMmo {
+    text-align: left;
+    width: calc(100% - 300px);
+    min-width: 500px;
+    margin: auto auto auto 150px;
+}
+
+details {
+    summary {
+        outline: none;
+        font-size: 25px;
+    }
 }
