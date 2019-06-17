@@ -2,7 +2,7 @@
     text-align: left;
     width: calc(100% - 300px);
     min-width: 500px;
-    margin: auto auto auto 150px;
+    margin: auto auto auto 200px;
 }
 
 details {
@@ -10,4 +10,24 @@ details {
         outline: none;
         font-size: 25px;
     }
+}
+
+.nestedSummary {
+    margin-left: 50px;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+hr {
+    border: 1px solid #666666;
+}
+
+a:link, a:visited {
+    border: none;
+    text-align: center;
+    //text-decoration: none;
+    text-underline: white;
+    color: white;
 }
