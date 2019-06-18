@@ -6,7 +6,7 @@
     <details>
         <summary>Preface</summary>
         A lot of this game design is inspired by <a href="https://www.eveonline.com/">EVE</a>, with the combat system of
-        <a href="https://dota2.com">DotA</a>.<br/>
+        <a href="https://dota2.com">DotA</a> and <a href="https://arena.battlerite.com/">Battlerite</a>.<br/>
         If you're at all interested in this concept, I suggest giving them both a try if you haven't already!
     </details>
 
@@ -79,12 +79,12 @@
         <details class="nestedSummary">
             <summary>Map Regions</summary>
             The map is broken up into 3 major region types:<br/>
-            <b>Highsec:</b>
+            <b>High Security:</b>
             <ul>
                 <li>Police kill anyone attacking anyone else</li>
                 <li>Loot/Ore/Other income methods reduced amount</li>
             </ul>
-            <b>Lowsec:</b>
+            <b>Low Security:</b>
             <ul>
                 <li>Attacking anyone lowers your reputation, once below a threshold, you'll be killed on site (by
                     police) when entering Highsec
@@ -93,41 +93,48 @@
                 <li>Loot/Ore/Other income methods average/median amount
                 </li>
             </ul>
-            <b>Nullsec:</b>
+            <b>No Security:</b>
             <ul>
                 <li>Wild west, no rep loss on killing people</li>
                 <li>Loot/Ore/Other income methods increased amount</li>
                 <li>The ability to build PLAYER OWNED BASES (continued below)</li>
             </ul>
+            High security will be in the middle of the map, and facilitates the new player experience, so they can learn
+            in safety.<br/>
+            Outside high security, is a ring of low security regions, which allows pvp and skirmishing, with the
+            relative safety of high security to retreat to<br/>
+            Then, outside low security, is the ring of no security, for player alliances to own land and fend for
+            themselves in alliance wars, for more land control (and the resources that come with it).
+        </details>
+        <details class="nestedSummary">
+            <summary>Building</summary>
 
+            In No Security regions, players can build their own structures.
+            These include
+            <ul>
+                <li>Bases, for you to safely store items</li>
+                <li>Walls</li>
+                <li>Towers/turrets</li>
+                <li>Resource generators like mines</li>
+                <li>Market place</li>
+                <li>Refineries and work shops</li>
+            </ul>
+            Defending these structures is obviously an important way to be safe within your area.<br/>
+            Defence is designed to allow fights over an objective, whilst also discouraging attacking in inactive time
+            zones.<br/>
+            You're not able to just destroy a wall in a session, and run rampant while your enemies are sleeping.<br/>
+            When you attack a structure, if you're able to do 20% damage, the structure is reinforced with a shield for
+            6 hours.<br/>
+            After the 6 hours is up, it's able to be damaged for the following 30m.<br/>
+            During this time, you must do another 20% (of max hp) to make it reinforce again.<br/>
+            If less than 5 minutes is left on the timer, any damage will extend the timer to 5 minutes.<br/>
+            This reinforce repeats 4 times, so a total of 24 hours of reinforcing.<br/>
+            If at any point you're unable to do the 20% hp required, it is healed up, by 20%, thus setting the attackers
+            back by 1 reinforce cycle (6h).<br/>
+            This defence strategy is designed to encourage attacking and defending in all time zones, rather than just
+            attacking in the least active
         </details>
     </details>
 
     <hr/>
-
-    A majority of the combat should be DotA like, with team damage on for a lot of skillshots/projectiles
-
-    I imagine in the future, the equivalent of Wormholes in eve, should be implemented (just connect zone A to zone
-    B temporarily through some rift)
-    NOT actually having WH space. Because Local won't be a thing anyway (just chat goes to people within X Meters of
-    you)
-
-    These PLAYER OWNED BASES, in Nullsec, is the cool part
-    Because in a top down world, you can have walls, towers, gates etc, all built by players, block by block (not
-    just space station X)
-
-    Defending these structures is obviously an important way to be safe within your area
-    Defence is designed to allow fights over an objective, whilst also discouraging attacking in inactive time zones
-    You're not able to just destroy a wall in a session, and run rampant while your enemies are sleeping
-    When you attack a structure, if you're able to do 20% damage, the structure is reinforced with a shield for 18
-    hours
-    After the 18 hours is up, it's able to be damaged for the following 30m
-    During this time, you must do another 20% (of max hp) to make it reinforce again
-    If less than 5 minutes is left on the timer, any damage will extend the timer to 5 minutes
-    This reinforce repeats 5 times, so a total of 72 hours of reinforcing
-    This means that the last 20% hp will be fought in the same time zone as the original attack
-    If at any point you're unable to do the 20% hp required, it is healed up, by 20%, thus setting the attackers
-    back by 1 reinforce cycle (18h)
-    This defence strategy is designed to encourage attacking and defending in all time zones, rather than just
-    attacking in the least active
 </div>
