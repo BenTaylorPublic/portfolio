@@ -3,14 +3,14 @@ import { CommonModule } from "@angular/common";
 
 import { GameDesignRoutingModule } from "./game-design-routing.module";
 import { GameDesignComponent } from "./components/game-design/game-design.component";
-import { EveDotaMmoComponent } from "./components/eve-dota-mmo/eve-dota-mmo.component";
+import { ProjectPandoraComponent } from "./components/project-pandora/project-pandora.component";
 
 @NgModule({
     imports: [
         CommonModule,
         GameDesignRoutingModule
     ],
-    declarations: [GameDesignComponent, EveDotaMmoComponent]
+    declarations: [GameDesignComponent, ProjectPandoraComponent]
 })
 export class GameDesignModule {
 }

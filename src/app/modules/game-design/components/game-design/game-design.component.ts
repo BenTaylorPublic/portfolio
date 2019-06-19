@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 })
 export class GameDesignComponent implements OnInit {
 
-    public gameDesignToShow: "none" | "eve-dota-mmo" = "none";
+    public gameDesignToShow: "none" | "project-pandora" = "none";
 
     constructor(private activatedRoute: ActivatedRoute,
                 private router: Router) {
@@ -19,7 +19,7 @@ export class GameDesignComponent implements OnInit {
                 return;
             }
 
-            if (parameters.gameDesignToShow === "eve-dota-mmo") {
+            if (parameters.gameDesignToShow === "project-pandora") {
                 this.gameDesignToShow = parameters.gameDesignToShow;
             }
         });
