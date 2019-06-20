@@ -3,6 +3,8 @@
     width: calc(100% - 420px);
     min-width: 500px;
     margin: auto auto auto 210px;
+    max-height: 100%;
+    overflow: auto;
 }
 
 details {
