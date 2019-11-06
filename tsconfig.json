@@ -1,7 +1,7 @@
 {
     "compileOnSave": false,
     "compilerOptions": {
-        "outDir": "./ts-dist/",
+        "outDir": "./docs/",
         "sourceMap": false,
         "declaration": false,
         "moduleResolution": "Node",
