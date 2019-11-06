@@ -1,44 +1,25 @@
 {
     "compileOnSave": false,
     "compilerOptions": {
-        "module": "esnext",
-        "outDir": "./dist/out-tsc",
+        "outDir": "./ts-dist/",
         "sourceMap": false,
         "declaration": false,
-        "moduleResolution": "node",
+        "moduleResolution": "Node",
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "target": "ES6",
         "lib": [
             "esnext",
             "dom"
         ],
         "baseUrl": "src/",
-        "paths": {
-            "@models/*": [
-                "app/models/*"
-            ],
-            "@mock/*": [
-                "app/mock/*"
-            ],
-            "@app/*": [
-                "app/modules/app/*"
-            ],
-            "@landing/*": [
-                "app/modules/landing/*"
-            ],
-            "@test/*": [
-                "app/modules/test/*"
-            ],
-            "@projects/*": [
-                "app/modules/projects/*"
-            ]
-        },
+        "paths": {},
+        "module": "commonjs",
         "strict": true,
         "noImplicitReturns": true,
         "allowSyntheticDefaultImports": true,
         "allowUnreachableCode": true,
-        "noUnusedLocals": false,
+        "noUnusedLocals": true,
+        "target": "ES6",
         "incremental": true,
         "removeComments": true,
         "noUnusedParameters": false,
@@ -47,6 +28,13 @@
         "noEmitOnError": true,
         "strictNullChecks": true,
         "noFallthroughCasesInSwitch": true,
-        "esModuleInterop": true
-    }
+        "esModuleInterop": true,
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "src/interfaces/*"
+    ]
 }
