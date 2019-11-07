@@ -10,7 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "tslint --project tslint.json && tsc --build --clean && sass src/:docs/ --no-source-map && copyfiles -a -u 1 \"./src/*.html\" \"./docs/\"",
+    "build": "tslint --project tslint.json && tsc --build && sass src/:docs/ --no-source-map && copyfiles -a -u 1 \"./src/*.html\" \"./docs/\"",
     "dev": "sass --watch src/:src/ | tsc -w --outDir src/"
   }
 }
