@@ -10,7 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "npm run build:lint && npm run build:tsc && npm run build:scss && npm run build:htmlcopy",
+    "build": "npm run -s build:lint && npm run -s build:tsc && npm run -s build:scss && npm run -s build:htmlcopy",
     "build:lint": "tslint --project tslint.json",
     "build:tsc": "tsc --build",
     "build:scss": "sass src/:docs/ --no-source-map",
