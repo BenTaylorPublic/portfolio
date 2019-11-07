@@ -10,6 +10,6 @@
   "devDependencies": {},
   "scripts": {
     "build": "tslint --project tslint.json && tsc --build --clean --outDir docs/",
-    "dev": "tsc -w"
+    "dev": "sass --watch src/:src/ | tsc -w"
   }
 }
