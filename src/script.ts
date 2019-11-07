@@ -1,3 +1,4 @@
 function derp(): void {
-    console.log("hi");
+    console.log("Test");
 }
+derp();
