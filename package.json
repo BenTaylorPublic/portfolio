@@ -9,7 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "tslint --project tslint.json && tsc --build --clean --outDir docs/",
-    "dev": "sass --watch src/:src/ | tsc -w"
+    "build": "tslint --project tslint.json && tsc --build --clean",
+    "dev": "sass --watch src/:src/ | tsc -w --outDir src/"
   }
 }
