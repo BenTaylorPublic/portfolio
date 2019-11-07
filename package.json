@@ -9,6 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "clear && echo \"Attempting to build...\" && tslint --project tslint.json && tsc --build --clean && echo \"SUCCESS\""
+    "build": "tslint --project tslint.json && tsc --build --clean --outDir docs/",
+    "dev": "tsc -w"
   }
 }
