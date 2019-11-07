@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "copyfiles": "^2.1.1",
     "tslint": "^5.15.0",
     "typescript": "^3.4.3"
   },
   "devDependencies": {},
   "scripts": {
-    "build": "tslint --project tslint.json && tsc --build --clean && sass src/:docs/ --no-source-map",
+    "build": "tslint --project tslint.json && tsc --build --clean && sass src/:docs/ --no-source-map && copyfiles -a -u 1 \"./src/*.html\" \"./docs/\"",
     "dev": "sass --watch src/:src/ | tsc -w --outDir src/"
   }
 }
