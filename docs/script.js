@@ -1,5 +1,5 @@
 "use strict";
 function derp() {
-    console.log("Test");
+    console.log("NewLog");
 }
 derp();
