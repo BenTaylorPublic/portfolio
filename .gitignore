@@ -6,5 +6,5 @@ dev/*
 *.tsbuildinfo
 *.css.map
 
-src/*.js
-src/*.css
+src/**/*.js
+src/**/*.css
