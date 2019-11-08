@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "copyfiles": "^2.1.1",
     "tslint": "^5.15.0",
     "typescript": "^3.4.3"
   },
@@ -13,7 +14,7 @@
     "build:lint": "tslint --project tslint.json",
     "build:tsc": "tsc --build",
     "build:scss": "sass src/:docs/ --no-source-map",
-    "build:htmlcopy": "cp src/*.html docs/",
+    "build:htmlcopy": "copyfiles -a -u 1 \"./src/**/*.html\" \"./docs/\"",
     "dev": "sass --watch src/:src/ | tsc -w --outDir src/"
   }
 }
