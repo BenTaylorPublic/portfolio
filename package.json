@@ -23,6 +23,8 @@
     "build:htmlcopy": "copyfiles -a -u 1 \"./src/**/*.html\" \"./docs/\"",
     "build:postclean": "rm -r tsc-dist/",
 
+    "dev": "npm run -s devbuild && grunt",
+
     "devbuild": "npm run -s devbuild:tsc && npm run -s devbuild:bundle && npm run -s devbuild:scss",
     "devbuild:tsc": "tsc --build",
     "devbuild:bundle": "node bundle-script.js dev",
