@@ -14,13 +14,18 @@
     "typescript": "^3.4.3"
   },
   "scripts": {
-    "build": "npm run -s build:lint && npm run -s build:clean && npm run -s build:tsc && npm run -s build:bundle && npm run -s build:scss && npm run -s build:htmlcopy",
+    "build": "npm run -s build:lint && npm run -s build:preclean && npm run -s build:tsc && npm run -s build:bundle && npm run -s build:scss && npm run -s build:htmlcopy && npm run -s build:postclean",
     "build:lint": "tslint --project tslint.json",
-    "build:clean": "rm -r docs/*",
+    "build:preclean": "rm -r docs/*",
     "build:tsc": "tsc --build",
     "build:bundle": "node bundle-script.js prod",
     "build:scss": "sass src/:docs/ --no-source-map",
     "build:htmlcopy": "copyfiles -a -u 1 \"./src/**/*.html\" \"./docs/\"",
-    "dev": "sass --watch src/:src/ | tsc -w --outDir src/"
+    "build:postclean": "rm -r tsc-dist/",
+
+    "dev": "npm run dev:tsc && npm run dev:bundle && npm run dev:scss",
+    "dev:tsc": "tsc --build",
+    "dev:bundle": "node bundle-script.js dev",
+    "dev:scss": "sass src/:src/ --no-source-map"
   }
 }

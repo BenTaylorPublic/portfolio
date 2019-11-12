@@ -14,5 +14,5 @@ const browserify = require("browserify");
 const fs = require("fs");
 
 let b = browserify();
-b.add("./" + directory + "/script.js");
-b.bundle().pipe(fs.createWriteStream("./" + directory + "/bundle-script.js"));
+b.add("./tsc-dist/script.js");
+b.bundle().pipe(fs.createWriteStream("./" + directory + "/script.bundle.js"));
