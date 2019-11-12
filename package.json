@@ -23,9 +23,9 @@
     "build:htmlcopy": "copyfiles -a -u 1 \"./src/**/*.html\" \"./docs/\"",
     "build:postclean": "rm -r tsc-dist/",
 
-    "dev": "npm run dev:tsc && npm run dev:bundle && npm run dev:scss",
-    "dev:tsc": "tsc --build",
-    "dev:bundle": "node bundle-script.js dev",
-    "dev:scss": "sass src/:src/ --no-source-map"
+    "devbuild": "npm run -s devbuild:tsc && npm run -s devbuild:bundle && npm run -s devbuild:scss",
+    "devbuild:tsc": "tsc --build",
+    "devbuild:bundle": "node bundle-script.js dev",
+    "devbuild:scss": "sass src/:src/ --no-source-map"
   }
 }

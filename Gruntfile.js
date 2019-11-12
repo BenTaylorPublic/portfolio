@@ -12,7 +12,7 @@ module.exports = function (grunt) {
                 cmd: 'npm',
                 args: [
                     'run',
-                    'build'
+                    'devbuild'
                 ]
             }
         },
