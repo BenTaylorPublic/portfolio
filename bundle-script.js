@@ -15,4 +15,4 @@ const fs = require("fs");
 
 let b = browserify();
 b.add("./" + directory + "/script.js");
-b.bundle().pipe(fs.createWriteStream("./" + directory + "/bundle.js"));
+b.bundle().pipe(fs.createWriteStream("./" + directory + "/bundle-script.js"));
