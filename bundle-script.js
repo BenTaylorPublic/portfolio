@@ -13,6 +13,14 @@ const bundles = [
     }
 ];
 
+const shared = [
+    {
+        entryDir: "",
+        entry: "some-class.js",
+        expose: "./some-class"
+    }
+];
+
 
 const environment = process.argv.slice(2)[0];
 
@@ -31,6 +39,21 @@ const fs = require("fs");
 for (const bundle of bundles) {
     let b = browserify();
     console.log("Bundling " + bundle.name);
-    b.add("./tsc-dist/" + bundle.entryDir + bundle.entry);
+    b.add("./tsc-dist/" + bundle.entryDir + bundle.entry, {
+        basedir: "./"
+    });
+    for (const sharedJs of shared) {
+        b.exclude("./tsc-dist/" + sharedJs.entryDir + sharedJs.entry);
+    }
     b.bundle().pipe(fs.createWriteStream("./" + outDir + bundle.entryDir + bundle.name + ".bundle.js"));
 }
+
+let b = browserify();
+console.log("Bundling shared");
+for (const sharedJs of shared) {
+    b.require("./tsc-dist/" + sharedJs.entryDir + sharedJs.entry, {
+        expose: sharedJs.expose,
+        basedir: "./"
+    });
+}
+b.bundle().pipe(fs.createWriteStream("./" + outDir + "shared.bundle.js"));
