@@ -14,20 +14,25 @@
     "typescript": "^3.4.3"
   },
   "scripts": {
-    "build": "npm run -s build:lint && npm run -s build:preclean && npm run -s build:tsc && npm run -s build:bundle && npm run -s build:scss && npm run -s build:htmlcopy && npm run -s build:postclean",
+    "build": "npm run -s build:lint && npm run -s build:preclean && npm run -s build:tsc && npm run -s build:bundle && npm run -s build:scss && npm run -s build:htmlcopy && npm run -s clean:remove-tsc-dist",
     "build:lint": "tslint --project tslint.json",
-    "build:preclean": "rm -r docs/*",
+    "build:preclean": "find ./docs/ -type f -delete",
     "build:tsc": "tsc --build",
     "build:bundle": "node bundle-script.js prod",
     "build:scss": "sass src/:docs/ --no-source-map",
     "build:htmlcopy": "copyfiles -a -u 1 \"./src/**/*.html\" \"./docs/\"",
-    "build:postclean": "rm -r tsc-dist/",
+
 
     "dev": "npm run -s devbuild && grunt",
 
     "devbuild": "npm run -s devbuild:tsc && npm run -s devbuild:bundle && npm run -s devbuild:scss",
     "devbuild:tsc": "tsc --build",
     "devbuild:bundle": "node bundle-script.js dev",
-    "devbuild:scss": "sass src/:src/ --no-source-map"
+    "devbuild:scss": "sass src/:src/ --no-source-map",
+
+    "clean": "npm run -s clean:css && npm run -s clean:js && npm run -s clean:remove-tsc-dist",
+    "clean:css": "find ./src/ -name \"*.css\" -type f -delete",
+    "clean:js":  "find ./src/ -name \"*.js\" -type f -delete",
+    "clean:remove-tsc-dist": "rm -r -f tsc-dist/"
   }
 }

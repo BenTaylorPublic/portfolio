@@ -16,3 +16,7 @@ const fs = require("fs");
 let b = browserify();
 b.add("./tsc-dist/script.js");
 b.bundle().pipe(fs.createWriteStream("./" + directory + "/script.bundle.js"));
+
+b = browserify();
+b.add("./tsc-dist/modules/example-module/example.js");
+b.bundle().pipe(fs.createWriteStream("./" + directory + "/modules/example-module/example.bundle.js"));
