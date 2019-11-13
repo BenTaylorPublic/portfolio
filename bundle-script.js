@@ -3,21 +3,18 @@ console.log("Bundling...");
 const bundles = [
     {
         name: "script",
-        entryDir: "",
-        entry: "script.js"
+        entryDir: ""
     },
     {
         name: "example",
-        entryDir: "modules/example-module/",
-        entry: "example.js"
+        entryDir: "modules/example-module/"
     }
 ];
 
 const shared = [
     {
-        entryDir: "",
-        entry: "some-class.js",
-        expose: "./some-class"
+        name: "some-class",
+        entryDir: "shared/"
     }
 ];
 
@@ -40,9 +37,9 @@ for (const bundle of bundles) {
     const outputFile = "./" + outDir + bundle.entryDir + bundle.name + ".bundle.js";
 
     let b = browserify();
-    b.add("./tsc-dist/" + bundle.entryDir + bundle.entry);
+    b.add("./tsc-dist/" + bundle.entryDir + bundle.name + ".js");
     for (const sharedJs of shared) {
-        b.exclude("./tsc-dist/" + sharedJs.entryDir + sharedJs.entry);
+        b.exclude("./tsc-dist/" + sharedJs.entryDir + sharedJs.name + ".js");
     }
     b.bundle(function (err1, buf) {
 
@@ -71,8 +68,8 @@ for (const bundle of bundles) {
 
 let b = browserify();
 for (const sharedJs of shared) {
-    b.require("./tsc-dist/" + sharedJs.entryDir + sharedJs.entry, {
-        expose: sharedJs.expose
+    b.require("./tsc-dist/" + sharedJs.entryDir + sharedJs.name + ".js", {
+        expose: "./" + sharedJs.entryDir + sharedJs.name
     });
 }
 b.bundle().pipe(fs.createWriteStream("./" + outDir + "shared.bundle.js"));
