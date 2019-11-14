@@ -14,11 +14,11 @@ const bundles = [
 const shared = [
     {
         name: "some-class",
-        entryDir: "shared/classes/"
+        entryDir: "classes/"
     },
     {
         name: "other-class",
-        entryDir: "shared/classes/"
+        entryDir: "classes/"
     }
 ];
 
@@ -43,7 +43,7 @@ for (const bundle of bundles) {
     let b = browserify();
     b.add("./tsc-dist/" + bundle.entryDir + bundle.name + ".js");
     for (const sharedJs of shared) {
-        b.exclude("./tsc-dist/" + sharedJs.entryDir + sharedJs.name + ".js");
+        b.exclude("./tsc-dist/shared/" + sharedJs.entryDir + sharedJs.name + ".js");
     }
     b.bundle(function (err1, buf) {
 
@@ -74,8 +74,8 @@ for (const bundle of bundles) {
 
 let b = browserify();
 for (const sharedJs of shared) {
-    b.require("./tsc-dist/" + sharedJs.entryDir + sharedJs.name + ".js", {
-        expose: "./" + sharedJs.entryDir + sharedJs.name
+    b.require("./tsc-dist/shared/" + sharedJs.entryDir + sharedJs.name + ".js", {
+        expose: "./shared/" + sharedJs.entryDir + sharedJs.name
     });
 }
 b.bundle().pipe(fs.createWriteStream("./" + outDir + "shared.bundle.js"));
