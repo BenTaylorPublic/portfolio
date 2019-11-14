@@ -1,6 +1,6 @@
 import { Mynfjkds } from "../enums/my-enums";
 
-export interface sickinterface {
+export interface SickInterface {
     id: number;
     thing: string;
     thinggy: Mynfjkds;

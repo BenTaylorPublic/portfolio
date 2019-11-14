@@ -1,9 +1,9 @@
-import { sickinterface } from "../interfaces/my-interface";
+import { SickInterface } from "../interfaces/my-interface";
 import { Mynfjkds } from "../enums/my-enums";
 
 export class MyCoolClass {
     public static hello(striign: string): void {
-        const dkgmsl: sickinterface = {
+        const dkgmsl: SickInterface = {
             id: 532,
             thing: "gndglkds",
             thinggy: Mynfjkds.Abc
