@@ -1,4 +1,4 @@
-import { MyCoolClass } from "../../shared/some-class";
+import { MyCoolClass } from "../../shared/classes/some-class";
 
 function derpu(): void {
     console.log("XD");

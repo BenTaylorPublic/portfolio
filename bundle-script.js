@@ -14,7 +14,11 @@ const bundles = [
 const shared = [
     {
         name: "some-class",
-        entryDir: "shared/"
+        entryDir: "shared/classes/"
+    },
+    {
+        name: "other-class",
+        entryDir: "shared/classes/"
     }
 ];
 
