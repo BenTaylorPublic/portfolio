@@ -62,6 +62,8 @@ for (const bundle of bundles) {
         bundleAsString = bundleAsString.split(`"../../`).join(`"./`);
         bundleAsString = bundleAsString.split(`"../`).join(`"./`);
 
+        checkNonSharedBundle(bundleAsString);
+
         fs.writeFile(outputFile, bundleAsString, function (err2) {
             if (err2) {
                 return console.log(err2);
@@ -77,3 +79,11 @@ for (const sharedJs of shared) {
     });
 }
 b.bundle().pipe(fs.createWriteStream("./" + outDir + "shared.bundle.js"));
+
+function checkNonSharedBundle(bundleAsString) {
+    const regex = new RegExp(/"\.\/shared\/.*":[^undefined]/g)
+    if (regex.test(bundleAsString) &&
+        environment === "prod") {
+        throw "Shared module bundled into regular bundle";
+    }
+}
