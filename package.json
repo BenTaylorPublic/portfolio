@@ -1,48 +1,37 @@
 {
   "name": "bentaylor",
-  "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
-  },
-  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "dependencies": {
-    "@angular/animations": "^8.0.0",
-    "@angular/common": "^8.0.0",
-    "@angular/compiler": "^8.0.0",
-    "@angular/core": "^8.0.0",
-    "@angular/forms": "^8.0.0",
-    "@angular/platform-browser": "^8.0.0",
-    "@angular/platform-browser-dynamic": "^8.0.0",
-    "@angular/router": "^8.0.0",
-    "core-js": "^3.1.3",
-    "rxjs": "^6.5.2",
-    "zone.js": "~0.9.1"
+    "browserify": "^16.5.0",
+    "copyfiles": "^2.1.1",
+    "fs": "0.0.1-security",
+    "grunt": "^1.0.4",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-run": "^0.8.1",
+    "tslint": "^5.15.0",
+    "typescript": "^3.4.3"
   },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "~0.800.0",
-    "@angular/cli": "^8.0.2",
-    "@angular/compiler-cli": "^8.0.0",
-    "@angular/language-service": "^8.0.0",
-    "@fortawesome/fontawesome-free": "^5.9.0",
-    "@types/jasmine": "^3.3.13",
-    "@types/jasminewd2": "^2.0.6",
-    "@types/node": "~12.0.7",
-    "codelyzer": "^5.0.1",
-    "jasmine-core": "~3.4.0",
-    "jasmine-spec-reporter": "~4.2.1",
-    "karma": "^4.1.0",
-    "karma-chrome-launcher": "~2.2.0",
-    "karma-coverage-istanbul-reporter": "~2.0.5",
-    "karma-jasmine": "~2.0.1",
-    "karma-jasmine-html-reporter": "^1.4.2",
-    "protractor": "^5.4.2",
-    "ts-node": "~8.2.0",
-    "tslint": "~5.17.0",
-    "typescript": "~3.4.3"
+  "scripts": {
+    "build": "npm run -s build:lint && npm run -s build:preclean && npm run -s build:tsc && npm run -s build:bundle && npm run -s build:scss && npm run -s build:htmlcopy && npm run -s clean:remove-tsc-dist",
+    "build:lint": "tslint --project tslint.json",
+    "build:preclean": "find ./docs/ -type f -delete",
+    "build:tsc": "tsc --build",
+    "build:bundle": "node bundle-script.js prod",
+    "build:scss": "sass src/:docs/ --no-source-map",
+    "build:htmlcopy": "copyfiles -a -u 1 \"./src/**/*.html\" \"./docs/\"",
+
+
+    "dev": "npm run -s devbuild && grunt",
+    "devbuild": "npm run -s devbuild:tsc && npm run -s devbuild:bundle && npm run -s devbuild:scss",
+    "devbuild:tsc": "tsc --build",
+    "devbuild:bundle": "node bundle-script.js dev",
+    "devbuild:scss": "sass src/:src/ --no-source-map",
+
+    "clean": "npm run -s clean:css && npm run -s clean:js && npm run -s clean:remove-tsc-dist",
+    "clean:css": "find ./src/ -name \"*.css\" -type f -delete",
+    "clean:js":  "find ./src/ -name \"*.js\" -type f -delete",
+    "clean:remove-tsc-dist": "rm -r -f tsc-dist/"
   }
 }
