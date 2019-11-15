@@ -4,11 +4,31 @@
     <meta charset="UTF-8">
     <title>Ben Taylor</title>
     <script>var exports = {};</script>
-    <script src="shared.bundle.js"></script>
-    <script src="script.bundle.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="shared.bundle.js" defer></script>
+    <script src="index.bundle.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-<h1>Back soon!</h1>
+<div id="landing">
+    <div id="benTaylor">
+        Ben Taylor
+    </div>
+    <div id="aboutMe">
+        I'm a full stack dev, and I play a heap of games.
+    </div>
+    <div id="btnProjects"
+         class="pageButton">
+        Projects
+    </div>
+    <div id="connections">
+        <div id="github"
+             class="connection"
+             onclick="githubClicked()">
+            <i class="fab fa-github"></i>
+        </div>
+    </div>
+</div>
 </body>
 </html>
