@@ -6,7 +6,7 @@ class IndexView {
         button.addEventListener("click", () => this.projectsClicked());
     }
     static projectsClicked() {
-        console.log("DHI");
+        alert("Back soon!");
     }
 }
 IndexView.initialize();

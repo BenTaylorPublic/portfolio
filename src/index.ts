@@ -5,7 +5,7 @@ class IndexView {
     }
 
     public static projectsClicked(): void {
-        console.log("DHI");
+        alert("Back soon!");
     }
 }
 
