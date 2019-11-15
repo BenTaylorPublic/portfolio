@@ -4,23 +4,10 @@ const bundles = [
     {
         name: "script",
         entryDir: ""
-    },
-    {
-        name: "example",
-        entryDir: "modules/example-module/"
     }
 ];
 
-const shared = [
-    {
-        name: "some-class",
-        entryDir: "classes/"
-    },
-    {
-        name: "other-class",
-        entryDir: "classes/"
-    }
-];
+const shared = [];
 
 
 const environment = process.argv.slice(2)[0];
