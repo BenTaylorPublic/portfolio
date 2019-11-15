@@ -18,7 +18,7 @@
         "noImplicitReturns": true,
         "allowSyntheticDefaultImports": true,
         "allowUnreachableCode": true,
-        "noUnusedLocals": true,
+        "noUnusedLocals": false,
         "target": "ES6",
         "incremental": true,
         "removeComments": true,
@@ -26,15 +26,14 @@
         "noImplicitThis": true,
         "noImplicitAny": true,
         "noEmitOnError": true,
-        "strictNullChecks": true,
+        "strictNullChecks": false,
         "noFallthroughCasesInSwitch": true,
-        "esModuleInterop": true,
+        "esModuleInterop": true
     },
     "include": [
         "src/**/*"
     ],
     "exclude": [
-        "node_modules",
-        "src/interfaces/*"
+        "node_modules"
     ]
 }

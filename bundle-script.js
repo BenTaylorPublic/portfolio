@@ -2,7 +2,7 @@ console.log("Bundling...");
 
 const bundles = [
     {
-        name: "script",
+        name: "index",
         entryDir: ""
     }
 ];

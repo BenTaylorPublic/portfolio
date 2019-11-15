@@ -1,0 +1,57 @@
+#landing {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#benTaylor {
+  height: 100px;
+  line-height: 100px;
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+}
+
+#aboutMe {
+  width: 100%;
+  text-align: center;
+  user-select: text;
+}
+
+.pageButton {
+  background-color: #333333;
+  width: 300px;
+  height: 30px;
+  line-height: 30px;
+  left: 0;
+  right: 0;
+  margin: 30px auto 0px auto;
+  border: 1px #666666 solid;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(1);
+  }
+}
+
+#connections {
+  height: 60px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 40px;
+
+  .connection {
+    cursor: pointer;
+    font-size: 60px;
+  }
+
+  #github {
+  }
+}
