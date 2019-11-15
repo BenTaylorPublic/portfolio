@@ -22,17 +22,14 @@
     "build:scss": "sass src/:docs/ --no-source-map",
     "build:htmlcopy": "copyfiles -a -u 1 \"./src/**/*.html\" \"./docs/\"",
     "build:cnamecopy": "copyfiles -a -u 1 \"./src/CNAME\" \"./docs/\"",
-
-
     "dev": "npm run -s devbuild && grunt",
     "devbuild": "npm run -s devbuild:tsc && npm run -s devbuild:bundle && npm run -s devbuild:scss",
     "devbuild:tsc": "tsc --build",
     "devbuild:bundle": "node bundle-script.js dev",
     "devbuild:scss": "sass src/:src/ --no-source-map",
-
     "clean": "npm run -s clean:css && npm run -s clean:js && npm run -s clean:remove-tsc-dist",
     "clean:css": "find ./src/ -name \"*.css\" -type f -delete",
-    "clean:js":  "find ./src/ -name \"*.js\" -type f -delete",
+    "clean:js": "find ./src/ -name \"*.js\" -type f -delete",
     "clean:remove-tsc-dist": "rm -r -f tsc-dist/"
   }
 }
