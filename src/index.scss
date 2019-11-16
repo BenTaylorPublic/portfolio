@@ -1,11 +1,14 @@
+$sectionMarginTops: 40px;
+
+* {
+  box-sizing: border-box;
+}
+
 body {
+  margin: 0;
   font-family: "Menlo", sans-serif;
   color: white;
   background-color: #000000;
-}
-
-a:visited {
-  color: white;
 }
 
 #bio {
@@ -14,15 +17,41 @@ a:visited {
   user-select: text;
 }
 
+#skills {
+  max-width: 600px;
+  margin: $sectionMarginTops auto auto auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  .skillColumnWrapper {
+    display: flex;
+    justify-content: center;
+    width: 210px;
+  }
+
+  .skillColumn {
+  }
+}
+
+#projects {
+}
+
+
 #connections {
   height: 60px;
   display: flex;
-  width: 100%;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: $sectionMarginTops;
+
+  a:visited {
+    color: white;
+  }
 
   .connection {
     cursor: pointer;
     font-size: 60px;
+    width: 80px;
+    text-align: center;
   }
 }
