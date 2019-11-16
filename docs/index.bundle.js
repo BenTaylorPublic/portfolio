@@ -2,11 +2,6 @@
 "use strict";
 class IndexView {
     static initialize() {
-        const button = document.getElementById("btnProjects");
-        button.addEventListener("click", () => this.projectsClicked());
-    }
-    static projectsClicked() {
-        alert("Back soon!");
     }
 }
 IndexView.initialize();
