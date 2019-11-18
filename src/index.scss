@@ -38,6 +38,21 @@ body {
   #projectsHeading {
     text-align: center;
   }
+
+  #projectCards {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .projectCard {
+      margin: 15px;
+      width: 370px;
+      height: 250px;
+      border-radius: 20px;
+      background-color: rebeccapurple;
+    }
+  }
 }
 
 
