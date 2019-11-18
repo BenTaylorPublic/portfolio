@@ -51,6 +51,29 @@ body {
       height: 250px;
       border-radius: 20px;
       background-color: rebeccapurple;
+
+      &:hover {
+        .projectCardDefault {
+          opacity: 0;
+        }
+
+        .projectCardHover {
+          opacity: 1;
+        }
+      }
+
+      .projectCardChild {
+        position: absolute;
+        transition: .5s ease;
+      }
+
+      .projectCardDefault {
+        opacity: 1;
+      }
+
+      .projectCardHover {
+        opacity: 0;
+      }
     }
   }
 }
