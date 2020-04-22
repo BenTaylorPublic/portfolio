@@ -1,4 +1,5 @@
 $sectionMarginTops: 40px;
+$projectCardHeight: 250px;
 
 * {
   box-sizing: border-box;
@@ -48,7 +49,7 @@ body {
     .projectCard {
       margin: 15px;
       width: 370px;
-      height: 250px;
+      height: $projectCardHeight;
       border-radius: 5px;
       background-color: rebeccapurple;
       overflow: hidden;
@@ -68,6 +69,18 @@ body {
         position: absolute;
         transition: .5s ease;
         height: 100%;
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+
+        .header {
+          padding-top: 10px;
+        }
+
+        .description {
+          padding: 10px;
+        }
 
         img {
           width: 100%;
