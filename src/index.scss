@@ -55,6 +55,14 @@ body {
       overflow: hidden;
       position: relative;
 
+      .projectCardDefault {
+        opacity: 1;
+      }
+
+      .projectCardHover {
+        opacity: 0;
+      }
+
       &:hover {
         .projectCardDefault {
           opacity: 0;
@@ -85,14 +93,6 @@ body {
         img {
           height: 100%;
         }
-      }
-
-      .projectCardDefault {
-        opacity: 1;
-      }
-
-      .projectCardHover {
-        opacity: 0;
       }
     }
   }
