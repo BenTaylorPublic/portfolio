@@ -101,6 +101,22 @@ a {
         img {
           height: 100%;
         }
+
+        .projectCardLinksBox {
+          display: flex;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 10px;
+          justify-content: space-around;
+
+          a {
+            border: 1px solid white;
+            padding: 5px;
+            border-radius: 5px;
+            width: 100px;
+          }
+        }
       }
     }
   }
