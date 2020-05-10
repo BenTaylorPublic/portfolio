@@ -12,6 +12,11 @@ body {
   background-color: #000000;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 #bio {
   text-align: center;
 }
@@ -81,8 +86,6 @@ body {
         height: 100%;
         width: 100%;
         text-align: center;
-        cursor: pointer;
-        user-select: none;
 
         .header {
           padding-top: 10px;
@@ -107,10 +110,6 @@ body {
   justify-content: center;
   margin-top: $sectionMarginTops;
   user-select: none;
-
-  a:visited {
-    color: white;
-  }
 
   .connection {
     cursor: pointer;
