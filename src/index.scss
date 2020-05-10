@@ -81,11 +81,14 @@ a {
 
       .projectCardChild {
         position: absolute;
-        transition: 0.5s ease;
-        transition-property: opacity, transform;
         height: 100%;
         width: 100%;
         text-align: center;
+
+        &:not(.preload) {
+          transition: 0.5s ease;
+          transition-property: opacity, transform;
+        }
 
         .header {
           padding-top: 10px;
