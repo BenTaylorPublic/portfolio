@@ -1,35 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Menlo", sans-serif;
+  margin: 0;
+  font-family: Monaco, monospace;
   color: white;
   background-color: #000000;
 }
 
-a:visited {
+a {
   color: white;
-}
-
-#benTaylor {
-  height: 100px;
-  line-height: 100px;
-  width: 100%;
-  font-size: 30px;
-  text-align: center;
+  text-decoration: none;
 }
 
 #bio {
+  text-align: center;
+}
+
+#skills {
+  max-width: 600px;
+  margin: 40px auto auto auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#skills .skillColumnWrapper {
+  display: flex;
+  justify-content: center;
+  width: 210px;
+}
+#projects {
+  margin-top: 40px;
+}
+#projects #projectsHeading {
+  text-align: center;
+}
+#projects #projectCards {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#projects #projectCards .projectCard {
+  margin: 15px;
+  width: 370px;
+  height: 250px;
+  border-radius: 5px;
+  background-color: #414141;
+  overflow: hidden;
+  position: relative;
+}
+#projects #projectCards .projectCard .projectCardDefault {
+  opacity: 1;
+}
+#projects #projectCards .projectCard .projectCardHover {
+  opacity: 0;
+}
+#projects #projectCards .projectCard:hover .projectCardDefault {
+  transform: scale(1.2);
+  opacity: 0;
+}
+#projects #projectCards .projectCard:hover .projectCardHover {
+  opacity: 1;
+}
+#projects #projectCards .projectCard .projectCardChild {
+  position: absolute;
+  height: 100%;
   width: 100%;
   text-align: center;
-  user-select: text;
+}
+#projects #projectCards .projectCard .projectCardChild:not(.preload) {
+  transition: 0.5s ease;
+  transition-property: opacity, transform;
+}
+#projects #projectCards .projectCard .projectCardChild .header {
+  padding-top: 10px;
+}
+#projects #projectCards .projectCard .projectCardChild .description {
+  padding: 10px;
+}
+#projects #projectCards .projectCard .projectCardChild img {
+  height: 100%;
+}
+#projects #projectCards .projectCard .projectCardChild .projectCardLinksBox {
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  justify-content: space-around;
+}
+#projects #projectCards .projectCard .projectCardChild .projectCardLinksBox a {
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 5px;
+  width: 100px;
 }
 
 #connections {
   height: 60px;
   display: flex;
-  width: 100%;
   justify-content: center;
   margin-top: 40px;
+  user-select: none;
 }
 #connections .connection {
   cursor: pointer;
   font-size: 60px;
+  width: 80px;
+  text-align: center;
 }

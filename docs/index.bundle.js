@@ -2,6 +2,12 @@
 "use strict";
 class IndexView {
     static initialize() {
+        setTimeout(() => {
+            const projectCardChilds = document.getElementsByClassName("projectCardChild");
+            for (let i = 0; i < projectCardChilds.length; i++) {
+                projectCardChilds[i].classList.remove("preload");
+            }
+        }, 200);
     }
 }
 IndexView.initialize();
