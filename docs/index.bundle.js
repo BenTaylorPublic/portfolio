@@ -1,15 +1,1 @@
-(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-"use strict";
-class IndexView {
-    static initialize() {
-        setTimeout(() => {
-            const projectCardChilds = document.getElementsByClassName("projectCardChild");
-            for (let i = 0; i < projectCardChilds.length; i++) {
-                projectCardChilds[i].classList.remove("preload");
-            }
-        }, 200);
-    }
-}
-IndexView.initialize();
-
-},{}]},{},[1]);
+!function(){return function e(r,t,n){function i(u,s){if(!t[u]){if(!r[u]){var c="function"==typeof require&&require;if(!s&&c)return c(u,!0);if(o)return o(u,!0);var f=new Error("Cannot find module '"+u+"'");throw f.code="MODULE_NOT_FOUND",f}var a=t[u]={exports:{}};r[u][0].call(a.exports,function(e){return i(r[u][1][e]||e)},a,a.exports,e,r,t,n)}return t[u].exports}for(var o="function"==typeof require&&require,u=0;u<n.length;u++)i(n[u]);return i}}()({1:[function(e,r,t){"use strict";(class{static initialize(){setTimeout(()=>{const e=document.getElementsByClassName("projectCardChild");for(let r=0;r<e.length;r++)e[r].classList.remove("preload")},200)}}).initialize()},{}]},{},[1]);
