@@ -1,16 +1,6 @@
 $sectionMarginTops: 40px;
 $projectCardHeight: 250px;
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Monaco, monospace;
-  color: white;
-  background-color: #000000;
-}
+$projectCardWidth: 370px;
 
 a {
   color: white;
@@ -53,7 +43,7 @@ a {
 
     .projectCard {
       margin: 15px;
-      width: 370px;
+      width: $projectCardWidth;
       height: $projectCardHeight;
       border-radius: 5px;
       background-color: #414141;

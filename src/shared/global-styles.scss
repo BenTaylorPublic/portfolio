@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Monaco, monospace;
+  color: white;
+  background-color: #000000;
+}
+
+.homeButton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #414141;
+  border: 2px solid white;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &:visited,
+  &:hover,
+  &:active,
+  &:link {
+    color: white;
+  }
+}
