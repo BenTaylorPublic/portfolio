@@ -1,0 +1,14 @@
+body {
+  text-align: center;
+}
+
+a {
+  text-decoration: underline;
+
+  &:visited,
+  &:hover,
+  &:active,
+  &:link {
+    color: white;
+  }
+}
