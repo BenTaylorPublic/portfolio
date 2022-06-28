@@ -1,5 +1,5 @@
 {
-  "bengularVersion": "v1.2.0",
+  "bengularVersion": "v1.3.0",
   "verbose": false,
   "pagesDirectory": "./src/pages/",
   "srcDirectory": "./src/",
@@ -8,5 +8,6 @@
   "componentsDirectory": "./src/components/",
   "assetsDirectory": "./src/assets/",
   "hostedPath": "/portfolio/",
-  "rootHtml": "/portfolio/index"
+  "rootHtml": "/portfolio/index",
+  "port": 4200
 }
