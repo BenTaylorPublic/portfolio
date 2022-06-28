@@ -1,6 +1,9 @@
+@use "sass:math";
+
 $sectionMarginTops: 40px;
 $projectCardHeight: 250px;
 $projectCardWidth: 370px;
+$projectCardMobile: 90vw;
 
 a {
   color: white;
@@ -8,11 +11,12 @@ a {
 }
 
 #bio {
+  padding-top: 20px;
   text-align: center;
 }
 
 #skills {
-  max-width: 600px;
+  max-width: 810px;
   margin: $sectionMarginTops auto auto auto;
   display: flex;
   justify-content: space-around;
@@ -21,7 +25,7 @@ a {
   .skillColumnWrapper {
     display: flex;
     justify-content: center;
-    width: 210px;
+    width: 405px;
   }
 
   .skillColumn {
@@ -43,8 +47,6 @@ a {
 
     .projectCard {
       margin: 15px;
-      width: $projectCardWidth;
-      height: $projectCardHeight;
       border-radius: 5px;
       background-color: #414141;
       overflow: hidden;
@@ -102,9 +104,8 @@ a {
 
           a {
             border: 1px solid white;
-            padding: 5px;
+            padding: 5px 10px;
             border-radius: 5px;
-            width: 100px;
           }
         }
       }
@@ -125,5 +126,26 @@ a {
     font-size: 60px;
     width: 80px;
     text-align: center;
+  }
+}
+
+
+body:not(.mobile) {
+  font-size: 14px;
+  line-height: 25px;
+
+  .projectCard {
+    width: $projectCardWidth;
+    height: $projectCardHeight;
+  }
+}
+
+body.mobile {
+  font-size: 38px;
+  line-height: 56px;
+
+  .projectCard {
+    width: $projectCardMobile;
+    height: math.div($projectCardHeight, $projectCardWidth) * $projectCardMobile;
   }
 }
